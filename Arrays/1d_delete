@@ -1,0 +1,45 @@
+
+/* deletion of array using defined method model */
+package data_structures;
+import java.util.*;
+import java.io.*;
+import java.util.Arrays;
+public class array_delete {
+	public static String delete(int[]arr , int target) {
+		for(int i=target; i<arr.length;i++) {
+			arr[i]=arr[i+1];
+			
+		int []new_array=new int[arr.length-1];
+	    	 
+		arr = Arrays.copyOf(arr, arr.length - 1);
+		
+		}
+		return Arrays.toString(arr);
+	}
+	
+	
+	
+	public static void main(String args[]) {
+	 Scanner sc= new Scanner(System.in);
+	 array_delete a=new array_delete();
+	 
+	 System.out.println("Enter the size of the array");
+	 int m = sc.nextInt();
+		
+     int []array1=new int[m];
+     System.out.println("Enter the elements of the array");
+     for(int i=0; i<array1.length;i++) {
+    	 array1[i]=sc.nextInt();
+     }
+     System.out.println("Original array is");
+     for(int i=0; i<array1.length;i++) {
+    	System.out.print(array1[i]+" ");
+     }
+     System.out.println();
+     System.out.println("Enter the index of array which u want to delete");
+     int k =sc.nextInt();
+     System.out.println("Array after deletion");
+     System.out.println(a.delete(array1, k));
+   
+    }}
+    
