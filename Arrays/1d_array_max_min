@@ -1,0 +1,56 @@
+/* We can use direct pakages for finding max and minimum 
+it is as follows
+1. Use java.util.Arrays pakages and sort the array
+2.Print minimum as first and maximum as last index
+The below code is to describe with method */
+
+package data_structures;
+import java.util.*;
+import java.io.*;
+import java.util.Arrays;
+
+import java.io.*;
+public class array_max_min {
+	
+	static int curr_value=0;
+	
+	
+	public static String max_min(int[]arr) {
+		int curr_value1=arr[0];
+		 for(int i=0; i<arr.length;i++) {
+	    	 
+	    	 if(arr[i]>curr_value) {
+	    		 
+	    		 curr_value=arr[i];
+	    	 }
+             if(arr[i]<curr_value) {
+	    		 
+	    		 curr_value1=arr[i];
+	    	 }
+		}
+		return "The maximum value "+curr_value + "\nThe minimum value is " + curr_value1;
+		
+	}
+	public static void main(String args[]) {
+	 Scanner sc= new Scanner(System.in);
+	 array_max_min a=new array_max_min();
+	 
+	 System.out.println("Enter the size of the array");
+	 int m = sc.nextInt();
+		
+     int []array1=new int[m];
+     System.out.println("Enter the elements of the array");
+     for(int i=0; i<array1.length;i++) {
+    	 array1[i]=sc.nextInt();
+     }
+     System.out.println("Original array is");
+     for(int i=0; i<array1.length;i++) {
+    	System.out.print(array1[i]+" ");
+     }
+     System.out.println();
+     System.out.println(a.max_min(array1));
+    
+    
+   
+    }}
+    
